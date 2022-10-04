@@ -1,0 +1,78 @@
+.page-header {
+  position: relative;
+
+  padding-top: 16px;
+  border: 1px solid #ececec;
+}
+
+.page-header__container {
+  @include centeredFlex($axisX: space-between);
+}
+
+// Logo
+
+.page-header__logo {
+  @extend %logo;
+
+  &--accent {
+    color: #000000;
+  }
+}
+
+.page-header__btn-menu {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+}
+
+.page-header__icon-close {
+  display: none;
+
+  .page-header__btn-menu.is-open & {
+    display: block;
+  }
+}
+
+.page-header__icon-menu {
+  .page-header__btn-menu.is-open & {
+    display: none;
+  }
+}
+
+// Nav
+
+.menu-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  padding: 48px 40px;
+  width: 100%;
+
+  background-color: palegoldenrod;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.nav {
+}
+
+.nav-list {
+}
+.nav-list__item {
+}
+.nav-list__link {
+}
+.nav-list__link--activite {
+}
+.contact-list {
+}
+.contact-list__item {
+}
+.contact-list__link {
+}
+.contact-list__icon {
+}

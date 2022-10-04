@@ -1,0 +1,109 @@
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-title {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-color;
+
+  @media screen and(min-width:$desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.team-list {
+  @media screen and(min-width:$tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.team-list__item {
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width:$tablet) {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and(min-width:$desktop) {
+    width: calc((100% - 3 * 30px) / 4);
+  }
+}
+
+.team-list__description {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-right: 32px;
+  padding-left: 32px;
+
+  text-align: center;
+}
+
+.team-list__title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: $title-color;
+}
+
+.team-list__text {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+// Social
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-list__item {
+}
+
+.social-list__link {
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
+
+  @include centeredFlex();
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $accent-color;
+  }
+}
+
+.social-list__icon {
+  fill: currentColor;
+}
