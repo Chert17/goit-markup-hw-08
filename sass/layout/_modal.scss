@@ -2,19 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-
-  padding-top: 93px;
-  padding-bottom: 94px;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  overflow-y: scroll;
-
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
+
   transition: opacity 250ms $cubic-bezier, visibility 250ms $cubic-bezier;
 
   &.is-hidden {
@@ -25,23 +18,23 @@
 }
 
 .modal {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%) scale(1);
-  // transition: transform 250ms $cubic-bezier;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $cubic-bezier;
 
-  // width: 450px;
-  // height: 609px;
+  width: 528px;
+  height: 581px;
   background-color: #ffffff;
 
-  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  //   0px 2px 1px rgba(0, 0, 0, 0.2);
-  // border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-  // .backdrop.is-hidden & {
-  //   transform: translate(-50%, -50%) scale(1.1);
-  // }
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 
 .modal__btn {
@@ -68,36 +61,36 @@
 
 // User-data
 
-.user-data {
+.modal__wrapper {
   padding: 40px;
 }
 
-.user-data__wrapper {
-  margin-bottom: 20px;
-}
-
-.user-data__title {
+.modal__title {
   margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: $title-color;
 }
 
-.user-data__label {
+.form__wrapper {
+  margin-bottom: 20px;
+}
+
+.form__item {
   display: flex;
   flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
-.user-data__label:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.user-data__specification {
+.form__desrciption {
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -107,9 +100,11 @@
 
 .input-wrapper {
   position: relative;
+
+  display: block;
 }
 
-.user-data__field {
+.form__field {
   @include centeredFlex();
 
   padding: 11px 40px;
@@ -130,10 +125,10 @@
   }
 }
 
-.user-data__field--placeholder {
+.form__field--placeholder {
   padding: 12px 16px;
 
-  width: 100%;
+  width: 448px;
   height: 120px;
 
   resize: none;
@@ -146,7 +141,7 @@
   }
 }
 
-.user-data__icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -156,7 +151,7 @@
   fill: #000000;
   transition: fill 250ms $cubic-bezier;
 
-  .user-data__field:focus + & {
+  .form__field:focus + & {
     fill: $accent-color;
   }
 }
@@ -167,7 +162,7 @@
   margin-bottom: 30px;
 }
 
-.user-check__label {
+.user-check__item {
   @include centeredFlex();
 }
 
@@ -196,9 +191,9 @@
   }
 }
 
-.user-check__specification {
-  font-size: 12px;
-  line-height: 1.17;
+.user-check__desrciption {
+  font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
@@ -207,21 +202,7 @@
   text-decoration: underline;
 }
 
-.user-data__btn {
-  @include centeredFlex();
+.form__btn {
   padding: 10px 52px;
   margin: 0 auto;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  color: #ffffff;
-  background-color: $accent-color;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: transparent;
-  cursor: pointer;
 }

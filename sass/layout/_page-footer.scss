@@ -1,0 +1,132 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+}
+
+.page-footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer-info__wrapper {
+  margin-right: 70px;
+}
+
+// Logo
+
+.page-footer__logo {
+  @extend %logo;
+
+  display: block;
+  margin-bottom: 20px;
+}
+
+.page-footer__logo--accent {
+  color: $secondary-white-color;
+}
+
+// Contacks
+
+.address {
+  font-style: normal;
+}
+
+.address-list__location {
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
+
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $secondary-white-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address-list__contact {
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
+
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.join {
+  margin-right: 93px;
+}
+
+.join__title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $secondary-white-color;
+}
+
+// Subscribe
+
+.subscribe__title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $secondary-white-color;
+}
+
+.subscribe__form {
+  display: flex;
+}
+
+.subscribe__field {
+  display: flex;
+  align-items: center;
+  padding: 15px 16px;
+  width: 358px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscribe__btn {
+  margin-left: 10px;
+  padding: 10px 28px;
+  align-items: center;
+
+  border: none;
+}
+
+.subsrcibe__icon {
+  margin-left: 10px;
+}
