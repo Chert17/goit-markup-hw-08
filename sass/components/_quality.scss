@@ -1,7 +1,24 @@
 .quality-list {
+  @media screen and(min-width:$tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .quality-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and(min-width:$tablet) {
+    align-items: flex-start;
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and(min-width:$desktop) {
+    width: calc((100% - 3 * 30px) / 4);
+  }
 }
 
 .quality-icon-wrapper {
@@ -23,14 +40,16 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: center;
+
   color: $title-color;
 }
 
 .quality-list__text {
-  margin-bottom: 30px;
-
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  @media screen and(max-width:767px) {
+    margin-bottom: 30px;
+  }
 }
