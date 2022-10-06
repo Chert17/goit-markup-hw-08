@@ -1,6 +1,4 @@
 .hero {
-  max-width: 480px;
-  height: 400px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 118px;
@@ -12,21 +10,77 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../img/hero-bg.jpg");
+    url("/img/hero-bg/hero-mob-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #2f303a;
 
-  @media screen and(min-width:$tablet) {
-    max-width: 768px;
-  }
-
   @media screen and(min-width:$desktop) {
-    max-width: 1600px;
-    height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .box {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("/img/hero-bg/hero-mob-bg-2x.jpg");
+    }
+  }
+
+  @media screen and(min-width:481px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("/img/hero-bg/hero-tab-bg.jpg");
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .box {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("/img/hero-bg/hero-tab-bg-2x.jpg");
+      }
+    }
+  }
+
+  @media screen and(min-width:769px) {
+    max-width: 1600px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("/img/hero-bg/hero-desk-bg.jpg");
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .box {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("/img/hero-bg/hero-desk-bg-2x.jpg");
+      }
+    }
   }
 }
 
