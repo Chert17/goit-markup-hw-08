@@ -415,7 +415,7 @@ button {
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
-  background-image: url("../../img/hero-bg/hero-mob-bg.jpg"), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/hero-bg/hero-mob-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
