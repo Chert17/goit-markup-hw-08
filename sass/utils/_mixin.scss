@@ -3,3 +3,23 @@
   align-items: $axisY;
   justify-content: $axisX;
 }
+
+@mixin img-ret() {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin test($class) {
+  .#{$class} {
+    @content;
+  }
+}
+
+@include test(test) {
+  display: flex;
+}
